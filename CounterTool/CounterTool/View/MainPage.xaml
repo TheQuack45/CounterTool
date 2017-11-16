@@ -2,6 +2,20 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:local="clr-namespace:CounterTool"
-             x:Class="CounterTool.MainPage">
-    
+             x:Class="CounterTool.MainPage"
+             Title="Counter Tool">
+    <ContentPage.ToolbarItems>
+        <ToolbarItem>
+            <ToolbarItem.Icon>
+                <OnPlatform x:TypeArguments="FileImageSource">
+                    <On Platform="Android" Value="plusIcon.png"/>
+                    <On Platform="iOS" Value="plusIcon.png"/>
+                    <On Platform="WinPhone" Value="Assets/plusIcon.png"/>
+                    <On Platform="Windows" Value="Assets/plusIcon.png"/>
+                    <On Platform="UWP" Value="Assets/plusIcon.png"/>
+                </OnPlatform>
+            </ToolbarItem.Icon>
+        </ToolbarItem>
+    </ContentPage.ToolbarItems>
+    <Label Text="Test"/>
 </ContentPage>

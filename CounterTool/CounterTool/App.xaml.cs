@@ -13,7 +13,7 @@ namespace CounterTool
         {
             InitializeComponent();
 
-            MainPage = new CounterTool.MainPage();
+            MainPage = new NavigationPage(new MainPage());
         }
 
         protected override void OnStart()
