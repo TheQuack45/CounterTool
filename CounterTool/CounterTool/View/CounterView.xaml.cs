@@ -3,20 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Xamarin.Forms;
 
-namespace CounterTool
+using Xamarin.Forms;
+using Xamarin.Forms.Xaml;
+
+namespace CounterTool.View
 {
-    public partial class MainPage : ContentPage
+    [XamlCompilation(XamlCompilationOptions.Compile)]
+    public partial class CounterView : ContentPage
     {
-        public MainPage()
+        public CounterView()
         {
             InitializeComponent();
-        }
-
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
         }
     }
 }
