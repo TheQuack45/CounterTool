@@ -10,12 +10,18 @@ namespace CounterTool.Model
     {
         #region Members definition
         #region Fields definition
+        private readonly int _id;
+
         private int _value;
         #endregion Fields definition
 
         #region Properties definition
         public string Name { get; set; }
 
+        public int Id
+        {
+            get { return this._id; }
+        }
         public int Value
         {
             get { return this._value; }
@@ -28,7 +34,13 @@ namespace CounterTool.Model
         #endregion Members definition
 
         #region Constructors definition
-        public Counter(string name)
+        public Counter(int id)
+        {
+            this._id = id;
+        }
+
+        public Counter(int id, string name)
+            : this(id)
         {
             this.Name = name;
         }
