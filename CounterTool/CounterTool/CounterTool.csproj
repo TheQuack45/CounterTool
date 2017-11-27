@@ -40,6 +40,7 @@
     </Compile>
     <Compile Include="Model\Counter.cs" />
     <Compile Include="Model\CounterHolder.cs" />
+    <Compile Include="ViewModel\CounterViewViewModel.cs" />
     <Compile Include="View\CounterView.xaml.cs">
       <DependentUpon>CounterView.xaml</DependentUpon>
     </Compile>
@@ -48,6 +49,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ViewModel\ViewModelBase.cs" />
     <Compile Include="View\WrapLayout.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -74,9 +76,7 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="ViewModel\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <EmbeddedResource Include="View\CounterView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>

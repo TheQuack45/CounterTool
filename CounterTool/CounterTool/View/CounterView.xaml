@@ -1,20 +1,11 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Grid xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:ViewModel="clr-namespace:CounterTool.ViewModel"
              x:Class="CounterTool.View.CounterView">
-    <!--<StackLayout Padding="5">
-        <Entry HorizontalOptions="Center" Text="Sample Counter"/>
-        <Label Text="10"/>
-        <StackLayout Orientation="Horizontal">
-            <Button Text="-" FontAttributes="Bold"/>
-            <Entry HorizontalOptions="CenterAndExpand" Text="1"/>
-            <Button Text="+" FontAttributes="Bold"/>
-        </StackLayout>
-        <StackLayout Orientation="Horizontal">
-            <Entry Placeholder="Min" Text="0"/>
-            <Entry Placeholder="Max" Text="10"/>
-        </StackLayout>
-    </StackLayout>-->
+    <Grid.BindingContext>
+        <ViewModel:CounterViewViewModel/>
+    </Grid.BindingContext>
     <Grid.RowDefinitions>
         <RowDefinition/>
         <RowDefinition/>
@@ -28,9 +19,13 @@
                Text="{Binding Title, Mode=TwoWay}"/>
         <Label Text="{Binding Value}"/>
         <StackLayout Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
-            <Button Text="-" FontAttributes="Bold"/>
-            <Entry HorizontalOptions="CenterAndExpand" Text="{Binding Step, Mode=TwoWay, StringFormat='{+0;-0}'}"/>
-            <Button Text="+" FontAttributes="Bold"/>
+            <Button Text="-" FontAttributes="Bold"
+                    Command="{Binding DecrementCommand}"/>
+            <!--This below line should be in the Text attribute binding below. Does not work yet.-->
+            <!--, StringFormat='{+0;-#}'-->
+            <Entry HorizontalOptions="CenterAndExpand" Text="{Binding Step, Mode=TwoWay}"/>
+            <Button Text="+" FontAttributes="Bold"
+                    Command="{Binding IncrementCommand}"/>
         </StackLayout>
         <StackLayout Grid.Row="2" Grid.Column="0" Orientation="Horizontal">
             <Entry Placeholder="Min" Text="{Binding Minimum, Mode=TwoWay}"/>

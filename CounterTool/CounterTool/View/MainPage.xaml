@@ -20,7 +20,7 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
-            
+            <View:CounterView/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>
