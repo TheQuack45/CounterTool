@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Xamarin.Forms;
 
-namespace CounterTool
+namespace CounterTool.View
 {
     /// <summary>
     /// A View that arranges its children horizontally across the page, then wraps display of subsequent children to additional rows.
