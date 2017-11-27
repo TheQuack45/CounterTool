@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+<Grid xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="CounterTool.View.CounterView">
-    <StackLayout Padding="5">
+    <!--<StackLayout Padding="5">
         <Entry HorizontalOptions="Center" Text="Sample Counter"/>
         <Label Text="10"/>
         <StackLayout Orientation="Horizontal">
@@ -14,5 +14,27 @@
             <Entry Placeholder="Min" Text="0"/>
             <Entry Placeholder="Max" Text="10"/>
         </StackLayout>
-    </StackLayout>
-</ContentPage>
+    </StackLayout>-->
+    <Grid.RowDefinitions>
+        <RowDefinition/>
+        <RowDefinition/>
+        <RowDefinition/>
+    </Grid.RowDefinitions>
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition/>
+    </Grid.ColumnDefinitions>
+    <Grid.Children>
+        <Entry Grid.Row="0" Grid.Column="0" HorizontalOptions="Center"
+               Text="{Binding Title, Mode=TwoWay}"/>
+        <Label Text="{Binding Value}"/>
+        <StackLayout Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
+            <Button Text="-" FontAttributes="Bold"/>
+            <Entry HorizontalOptions="CenterAndExpand" Text="{Binding Step, Mode=TwoWay, StringFormat='{+0;-0}'}"/>
+            <Button Text="+" FontAttributes="Bold"/>
+        </StackLayout>
+        <StackLayout Grid.Row="2" Grid.Column="0" Orientation="Horizontal">
+            <Entry Placeholder="Min" Text="{Binding Minimum, Mode=TwoWay}"/>
+            <Entry Placeholder="Max" Text="{Binding Maximum, Mode=TwoWay}"/>
+        </StackLayout>
+    </Grid.Children>
+</Grid>
