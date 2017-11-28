@@ -40,7 +40,9 @@
     </Compile>
     <Compile Include="Model\Counter.cs" />
     <Compile Include="Model\CounterHolder.cs" />
+    <Compile Include="Model\ModelBase.cs" />
     <Compile Include="ViewModel\CounterViewViewModel.cs" />
+    <Compile Include="ViewModel\MainWindowViewModel.cs" />
     <Compile Include="View\CounterView.xaml.cs">
       <DependentUpon>CounterView.xaml</DependentUpon>
     </Compile>

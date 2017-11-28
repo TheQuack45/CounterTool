@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace CounterTool.Model
 {
-    public class CounterHolder
+    public class CounterHolder : ModelBase
     {
         #region Members definition
         #region Fields definition
@@ -22,8 +22,9 @@ namespace CounterTool.Model
         {
             get
             {
+                //{ this._countersObservable = new ObservableCollection<Counter>(this._counters); }
                 if (this._countersObservable == null)
-                    { this._countersObservable = new ObservableCollection<Counter>(this._counters); }
+                    { this.SetProperty(ref this._countersObservable, new ObservableCollection<Counter>(this._counters)); }
                 return this._countersObservable;
             }
         }
