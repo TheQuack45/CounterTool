@@ -7,29 +7,32 @@
         <ViewModel:CounterViewViewModel/>
     </Grid.BindingContext>
     <Grid.RowDefinitions>
-        <RowDefinition/>
-        <RowDefinition/>
-        <RowDefinition/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
     </Grid.RowDefinitions>
     <Grid.ColumnDefinitions>
-        <ColumnDefinition/>
+        <ColumnDefinition Width="Auto"/>
     </Grid.ColumnDefinitions>
     <Grid.Children>
-        <Entry Grid.Row="0" Grid.Column="0" HorizontalOptions="Center"
+        <Entry Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" FontSize="16"
                Text="{Binding Title, Mode=TwoWay}"/>
-        <Label Text="{Binding Value}"/>
-        <StackLayout Grid.Row="1" Grid.Column="0" Orientation="Horizontal">
-            <Button Text="-" FontAttributes="Bold"
+        <StackLayout Grid.Row="1" Grid.Column="0" Orientation="Horizontal" HorizontalOptions="Center">
+            <Entry Placeholder="Min" FontSize="16" HorizontalOptions="Center" Text="{Binding Minimum, Mode=TwoWay}"/>
+            <Label HorizontalOptions="CenterAndExpand" FontSize="20" FontAttributes="Bold" TextColor="Black"
+                   Text="{Binding Value}"/>
+            <Entry Placeholder="Max" FontSize="16" HorizontalOptions="Center" Text="{Binding Maximum, Mode=TwoWay}"/>
+        </StackLayout>
+        <StackLayout Grid.Row="2" Grid.Column="0" Orientation="Horizontal" HorizontalOptions="Center">
+            <Button Text="-" FontAttributes="Bold" FontSize="16" HorizontalOptions="Center" Margin="5"
                     Command="{Binding DecrementCommand}"/>
             <!--This below line should be in the Text attribute binding below. Does not work yet.-->
             <!--, StringFormat='{+0;-#}'-->
-            <Entry HorizontalOptions="CenterAndExpand" Text="{Binding Step, Mode=TwoWay}"/>
-            <Button Text="+" FontAttributes="Bold"
+            <Entry HorizontalOptions="Center" FontSize="16" Text="{Binding Step, Mode=TwoWay}"/>
+            <Button Text="+" FontAttributes="Bold" FontSize="16" HorizontalOptions="Center" Margin="5"
                     Command="{Binding IncrementCommand}"/>
         </StackLayout>
-        <StackLayout Grid.Row="2" Grid.Column="0" Orientation="Horizontal">
-            <Entry Placeholder="Min" Text="{Binding Minimum, Mode=TwoWay}"/>
-            <Entry Placeholder="Max" Text="{Binding Maximum, Mode=TwoWay}"/>
-        </StackLayout>
+        
     </Grid.Children>
 </Grid>
