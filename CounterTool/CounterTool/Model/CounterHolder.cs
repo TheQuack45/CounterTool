@@ -22,9 +22,9 @@ namespace CounterTool.Model
         {
             get
             {
-                //{ this._countersObservable = new ObservableCollection<Counter>(this._counters); }
                 if (this._countersObservable == null)
-                    { this.SetProperty(ref this._countersObservable, new ObservableCollection<Counter>(this._counters)); }
+                { this.SetProperty(ref this._countersObservable, new ObservableCollection<Counter>(this._counters)); }
+                //{ this._countersObservable = new ObservableCollection<Counter>(this._counters); }
                 return this._countersObservable;
             }
         }

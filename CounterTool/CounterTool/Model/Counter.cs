@@ -28,6 +28,7 @@ namespace CounterTool.Model
         {
             get { return this._value; }
             private set { this.SetProperty<int>(ref this._value, value); }
+            //private set { this._value = value; }
         }
         public int Step { get; set; }
         public int? Maximum
@@ -94,6 +95,7 @@ namespace CounterTool.Model
             { return; }
 
             this.SetProperty<int?>(ref this._maximum, max);
+            this._maximum = max;
         }
 
         public void SetMinimum(int? min)
@@ -102,6 +104,7 @@ namespace CounterTool.Model
             { return; }
 
             this.SetProperty<int?>(ref this._minimum, min);
+            this._minimum = min;
         }
         #endregion Methods definition
     }

@@ -25,30 +25,30 @@
     <ContentPage.Content>
         <StackLayout>
             <ListView>
-                <!--<ListView.ItemTemplate>
+                <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout>
-                            --><!--Text="{Binding Title, Mode=TwoWay}"--><!--
+                            <!--Text="{Binding Title, Mode=TwoWay}"-->
                             <Entry Grid.Row="0" Grid.Column="0" HorizontalOptions="Center" FontSize="16"/>
                             <StackLayout Grid.Row="1" Grid.Column="0" Orientation="Horizontal" HorizontalOptions="Center">
-                                --><!--Text="{Binding Minimum, Mode=TwoWay}"--><!--
+                                <!--Text="{Binding Minimum, Mode=TwoWay}"-->
                                 <Entry Placeholder="Min" FontSize="16" HorizontalOptions="Center"/>
-                                --><!--Text="{Binding Value}"--><!--
+                                <!--Text="{Binding Value}"-->
                                 <Label HorizontalOptions="CenterAndExpand" FontSize="20" FontAttributes="Bold" TextColor="Black"/>
-                                --><!--Text="{Binding Maximum, Mode=TwoWay}"--><!--
+                                <!--Text="{Binding Maximum, Mode=TwoWay}"-->
                                 <Entry Placeholder="Max" FontSize="16" HorizontalOptions="Center"/>
                             </StackLayout>
                             <StackLayout Grid.Row="2" Grid.Column="0" Orientation="Horizontal" HorizontalOptions="Center">
                                 <Button Text="-" FontAttributes="Bold" FontSize="16" HorizontalOptions="Center" Margin="5"/>
-                                --><!--This below line should be in the Text attribute binding below. Does not work yet.-->
-                                <!--, StringFormat='{+0;-#}'-->
-                                <!--Text="{Binding Step, Mode=TwoWay}"--><!--
+                                <!--This below line should be in the Text attribute binding below. Does not work yet.
+                                , StringFormat='{+0;-#}'
+                                Text="{Binding Step, Mode=TwoWay}"-->
                                 <Entry HorizontalOptions="Center" FontSize="16"/>
                                 <Button Text="+" FontAttributes="Bold" FontSize="16" HorizontalOptions="Center" Margin="5"/>
                             </StackLayout>
                         </StackLayout>
                     </DataTemplate>
-                </ListView.ItemTemplate>-->
+                </ListView.ItemTemplate>
             </ListView>
         </StackLayout>
     </ContentPage.Content>
