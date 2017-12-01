@@ -12,22 +12,17 @@ namespace CounterTool.Model
         #region Members definition
         #region Fields definition
         private readonly List<Counter> _counters;
-        private ObservableCollection<Counter> _countersObservable;
+        //private ObservableCollection<Counter> _countersObservable;
         #endregion Fields definition
 
         #region Properties definition
         // TODO: This could probably all be reworked to be quite a bit cleaner.
         // Maybe the ObservableCollection doesn't need to be backed by a List since the elements only need to have unique IDs.
-        public ObservableCollection<Counter> Counters
-        {
-            get
-            {
-                if (this._countersObservable == null)
-                { this.SetProperty(ref this._countersObservable, new ObservableCollection<Counter>(this._counters)); }
-                //{ this._countersObservable = new ObservableCollection<Counter>(this._counters); }
-                return this._countersObservable;
-            }
-        }
+        //if (this._countersObservable == null)
+        //{ this.SetProperty(ref this._countersObservable, new ObservableCollection<Counter>(this._counters)); }
+        ////{ this._countersObservable = new ObservableCollection<Counter>(this._counters); }
+        //return this._countersObservable;
+        public ObservableCollection<Counter> Counters { get; private set; }
         #endregion Properties definition
         #endregion Members definition
 
@@ -35,6 +30,7 @@ namespace CounterTool.Model
         public CounterHolder()
         {
             this._counters = new List<Counter>();
+            this.Counters = new ObservableCollection<Counter>(this._counters);
         }
         #endregion Constructors definition
 

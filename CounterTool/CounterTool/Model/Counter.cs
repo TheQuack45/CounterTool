@@ -28,7 +28,6 @@ namespace CounterTool.Model
         {
             get { return this._value; }
             private set { this.SetProperty<int>(ref this._value, value); }
-            //private set { this._value = value; }
         }
         public int Step { get; set; }
         public int? Maximum

@@ -27,7 +27,7 @@ namespace CounterTool.ViewModel
         public MainWindowViewModel()
         {
             this._counterHolder = new CounterHolder();
-            this._counterHolder.Add();
+            //this._counterHolder.Add();
         }
         #endregion Constructors definition
 
