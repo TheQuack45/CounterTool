@@ -24,7 +24,7 @@
     </ContentPage.ToolbarItems>
     <ContentPage.Content>
         <StackLayout>
-            <ListView ItemsSource="Counters">
+            <ListView ItemsSource="{Binding Counters}">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <StackLayout>
